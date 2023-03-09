@@ -33,5 +33,5 @@ document.addEventListener('DOMContentLoaded', function() {
     </div>
         </div>`
     }
-    main.innerHTML=heroesContent;
+    main.innerHTML=heroesContent;    
 })
