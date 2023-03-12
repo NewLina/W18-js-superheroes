@@ -37,10 +37,8 @@ document.addEventListener('DOMContentLoaded', function() {
     
     for (let hero of superheroes) {
         document.getElementById(`${hero.name}`).onclick = function (e) {
-            const chosenRating = Array.from(e.currentTarget.children).filter((child) => {
-                return child.checked===true;
-            });
-            window.localStorage.setItem(`${hero.name}_rating`, chosenRating[0].value)
+            const chosenRating = e.target.control.value;
+            window.localStorage.setItem(`${hero.name}_rating`, chosenRating)
         };
     }
 });
